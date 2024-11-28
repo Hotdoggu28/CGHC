@@ -1,0 +1,733 @@
+/* Global Styles */
+body, html {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Ensure full height is used */
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Space between logo+university name and links */
+    align-items: center;
+    padding: 10px 20px; /* Compact size */
+    position: relative;
+}
+
+nav .logo {
+    margin-right: 10px; /* No extra space between logo and university name */
+}
+
+nav .university-name {
+    margin: 0;
+    padding: 0;
+}
+
+nav .university-name h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+/* Navbar Links - Align to the right */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Space between links */
+    margin-left: auto; /* Push the links to the right */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Slightly larger font size */
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #fff;
+    background-color: #e06823; /* Add a soft color change on hover */
+    border-radius: 5px; /* Rounded corners */
+    transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Active Link Effect */
+nav ul li a.active {
+    color: #e06823; /* Highlight active link with the same color */
+    font-weight: bold; /* Make active link bold */
+    text-decoration: underline; /* Add underline to show it's active */
+}
+
+/* Underline Effect on Hover */
+nav ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust underline position */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e06823; /* Underline color */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+}
+
+nav ul li a.active::after {
+    width: 100%; /* Full width underline for active state */
+}
+
+
+.logo img {
+    height: 50px; /* Adjust height to your desired logo size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Home Page Styles */
+header.home {
+    text-align: center;
+    padding: 0;
+    background-image: url('images/bg\ img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 92vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Ensure text is visible */
+}
+
+header.home h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for better readability */
+}
+
+header.home button {
+    position: absolute;
+    bottom: 20%; /* Adjust vertical positioning */
+    left: 15%; /* Adjust horizontal positioning */
+    transform: translateX(-50%); /* Center the button */
+    padding: 12px 30px; /* Adjust padding for better button size */
+    font-size: 18px; /* Slightly larger font size */
+    background: linear-gradient(135deg, #6a82fb, #e06823); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-transform: uppercase; /* Uppercase letters for a modern look */
+    letter-spacing: 1.5px; /* Slight letter spacing */
+    font-weight: bold; /* Make the text bold */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+header.home button:hover {
+    transform: translateX(-50%) scale(1.05); /* Slight scale up effect */
+    background: linear-gradient(135deg, #e06823, #6a82fb); /* Reverse gradient on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+
+/* About The Campus Section */
+#about-campus {
+    background-color: #e06823; /* Orange background */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white; /* Text color for readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between title, text, and images */
+    opacity: 0;
+    transform: translateY(50px); /* Initially shifted down */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
+
+#about-campus h2 {
+    font-size: 34px;
+    font-weight: bold;
+    color: white; /* Header color */
+    margin-bottom: 15px;
+}
+
+#about-campus p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff; /* Text color */
+}
+#about-campus p2 {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff; /* Text color */
+}
+
+.about-campus-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Image container for About The Campus */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 40%; /* 3 images, so each takes up around 32% */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the images */
+    transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mission and Vision Section */
+#mission-vision {
+    background-color: #6a82fb; /* Blue background */
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#mission-vision img {
+    width: 100%; /* Adjust image width */
+    max-width: 800px; /* Prevent image from growing too large */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow for the images */
+}
+
+.mission-vision-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Add smooth scrolling to the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation when the section comes into view */
+#about-campus.visible, #mission-vision.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move the section into place */
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 20px 10px; /* Reduced padding for a slimmer footer */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between; /* Spread columns across the footer */
+    align-items: flex-start;
+    gap: 30px; /* Reduce space between columns */
+}
+
+.footer-column {
+    flex: 1; /* Ensures the columns take equal space */
+    max-width: 250px; /* Reduce column width */
+}
+
+.footer-column .logo img {
+    width: 70px; /* Reduce logo size */
+    height: auto;
+}
+
+.footer-column .university-name h3 {
+    font-size: 20px; /* Reduced font size */
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.footer-column h4 {
+    font-size: 26px; /* Reduced header size */
+    margin-bottom: 10px; /* Reduce spacing between the header and content */
+    font-weight: bold;
+}
+
+.footer-column .contact-details,
+.footer-column .about-us {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px; /* Smaller text for slim footer */
+}
+
+.footer-column .contact-details li,
+.footer-column .about-us li {
+    margin: 3px 0; /* Reduced space between items */
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack columns vertically on small screens */
+        align-items: center;
+    }
+
+    .footer-column {
+        max-width: 100%; /* Allow columns to take up full width on smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px; /* Adjust header size for mobile screens */
+    }
+
+    .footer-column .contact-details li,
+    .footer-column .about-us li {
+        font-size: 10px; /* Smaller text for mobile screens */
+    }
+}
+
+
+
+/* About Page Specific Styles */
+#about-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#historical-background {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for the history section */
+    border-radius: 8px;
+}
+
+#historical-background h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#historical-background p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+
+/* About Page Content */
+#about-page {
+    padding: 40px 20px;
+    background-color: #fff; /* White background for the content */
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+#historical-background {
+    margin-bottom: 50px;
+}
+
+.history-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e06823; /* Border for separation */
+    padding-bottom: 30px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.history-part:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.history-text {
+    width: 70%;
+    padding-right: 30px;
+    text-align: justify; /* Justify the text for better readability */
+}
+
+.history-text h2 {
+    color: #e06823; /* Soft blue for heading */
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase; /* Make heading more impactful */
+}
+
+.history-text p {
+    color: #333; /* Dark text for readability */
+    line-height: 1.8;
+    font-size: 15px;
+    letter-spacing: 0.5px; /* Subtle letter spacing for better readability */
+}
+
+.history-image {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add stronger shadow for better depth */
+    border: 3px solid #6a82fb; /* Soft blue border around images */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.history-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #about-page {
+        padding: 20px;
+    }
+
+    .history-part {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none; /* Remove the bottom border on small screens */
+        padding-bottom: 20px;
+    }
+
+    .history-text {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center; /* Center the text on small screens */
+    }
+
+    .history-image {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .history-image img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Events Page Styles */
+#events-page {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#events-page h2 {
+    color: #6a82fb; /* Soft blue for heading */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.event {
+    background-color: #f5f5f5;
+    border: 1px solid #e06823; /* Orange border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px); /* Lift the event box on hover */
+}
+
+.event h3 {
+    color: #e06823; /* Orange for event title */
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.event p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.event p strong {
+    color: #6a82fb; /* Highlight important info like date and location */
+}
+
+.event-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows for wrapping of images if necessary */
+}
+
+.event-images img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.event-images img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #events-page {
+        padding: 20px;
+    }
+
+    .event h3 {
+        font-size: 1.8em;
+    }
+
+    .event-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-images img {
+        width: 90%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .event p {
+        font-size: 1em;
+    }
+}
+
+
+
+/* Programs Page Styles */
+#programs-page {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light gray background for the page */
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#programs-page h2 {
+    color: #6a82fb; /* Soft blue for heading */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.program {
+    background-color: #fff;
+    border: 1px solid #e06823; /* Orange border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.program h3 {
+    color: #e06823; /* Orange for program title */
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.program p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.program p strong {
+    color: #6a82fb; /* Highlight important info */
+}
+
+.event-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.event-images img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #programs-page {
+        padding: 20px;
+    }
+
+    .program h3 {
+        font-size: 1.8em;
+    }
+
+    .program p {
+        font-size: 1em;
+    }
+
+    .event-images img {
+        width: 100%;
+    }
+}
+
+
+/* Contact Page Styles */
+#contact-page {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    margin-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact-page h2 {
+    color: #6a82fb; /* Soft blue for heading */
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact-page p {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #e06823; /* Orange button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #c0571f; /* Darker orange on hover */
+}
+
+#contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact-info h3 {
+    color: #6a82fb; /* Soft blue for subheading */
+    margin-bottom: 20px;
+}
+
+#contact-info p {
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #contact-page {
+        padding: 20px;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+}
+
+
+/* Map Container */
+#map-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#map-container h3 {
+    color: #6a82fb; /* Soft blue for heading */
+    margin-bottom: 20px;
+}
+
+#map-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
